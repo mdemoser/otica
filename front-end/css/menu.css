@@ -1,0 +1,113 @@
+/* ===== MENU ===== */
+
+body.pagina-menu,
+body.pagina-menu *,
+body.pagina-menu *::before,
+body.pagina-menu *::after {
+  box-sizing: border-box;
+}
+
+body.pagina-menu {
+  display: block;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: #f2f4f7;
+  font-family: Arial, sans-serif;
+  color: #1f2933;
+}
+
+body.pagina-menu main {
+  display: block;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px 16px 32px;
+}
+
+body.pagina-menu h1 {
+  margin: 0 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #d5dae1;
+  font-size: 1.6rem;
+  text-align: left;
+}
+
+/* painel com os quatro botões na mesma linha */
+body.pagina-menu .menu-opcoes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  width: 100%;
+  margin: 0 0 16px;
+  padding: 24px 16px;
+  background: #fff;
+  border: 1px solid #dde1e6;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+body.pagina-menu .btn-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 110px;
+  padding: 0 12px;
+  border: 1px solid var(--cor-principal, #1a73e8);
+  border-radius: 8px;
+  background: var(--cor-principal, #1a73e8);
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+body.pagina-menu .btn-menu:hover {
+  background: var(--cor-principal-escura, #155ab6);
+  border-color: var(--cor-principal-escura, #155ab6);
+}
+
+/* rodapé com o botão Voltar */
+body.pagina-menu .menu-rodape {
+  display: flex;
+  justify-content: flex-start;
+}
+
+body.pagina-menu .btn-voltar {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 38px;
+  padding: 0 20px;
+  border: 1px solid #b5bcc6;
+  border-radius: 6px;
+  background: #fff;
+  color: #1f2933;
+  font-size: 0.95rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+body.pagina-menu .btn-voltar:hover {
+  background: #eef0f2;
+}
+
+body.pagina-menu .btn-menu:focus-visible,
+body.pagina-menu .btn-voltar:focus-visible {
+  outline: 2px solid var(--cor-principal-escura, #155ab6);
+  outline-offset: 2px;
+}
+
+/* ===== TELA ESTREITA ===== */
+@media (max-width: 700px) {
+  body.pagina-menu main {
+    padding: 12px 10px 24px;
+  }
+
+  /* dois por linha em vez de quatro */
+  body.pagina-menu .menu-opcoes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
